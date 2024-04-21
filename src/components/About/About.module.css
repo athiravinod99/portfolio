@@ -4,15 +4,12 @@
   position: relative;
   border-radius: 15px;
   padding: 73px;
-  margin-top: 129px;
+  margin-top: 100px auto;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .title {
   color: var(--color-text);
-  font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
@@ -24,8 +21,14 @@
   align-items: center;
 }
 
-.aboutImage {
-  width: 35%;
+.heroImg {
+  width: 45%;
+  z-index: 1;
+  border-radius: 50%;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .aboutItems {
@@ -42,11 +45,9 @@
   border-radius: 20px;
   list-style: none;
   padding: 25px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(165, 215, 232, 0.42) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background-image: linear-gradient(90deg,
+      rgba(165, 215, 232, 0.42) 0%,
+      rgba(255, 255, 255, 0) 100%);
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
@@ -65,19 +66,136 @@
   font-size: 25px;
 }
 
-.paragraph {
-    color: var(--color-text);
-}
-
 .info {
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
-.card{
-    color: #1f1f1f;
-    border: 1px solid;
+.card {
+  color: var(--color-text);
+  border-radius: 40%;
+  background-color: var(--color-secondary) !important;
+  -webkit-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.52) !important;
+  -moz-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.52) !important;
+  box-shadow: -1px 3px 38px 7px rgba(250, 170, 105, 0.52) !important;
+  border-radius: 10px !important;
 }
 
+
+.icon {
+  color: var(--color-primary);
+  background-color: black;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.counter span {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@keyframes increment {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.counterContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aboutDetails {
+  height: 100%;
+  padding: 10px;
+}
+.counter #experienceCount,
+.counter #projectsCount {
+  animation: increment 1s infinite alternate;
+}
+
+.countText {
+  color: var(--color-text) !important;
+}
+/* Hide the default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkContainer {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  align-items: center;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 2.3em;
+  width: 2.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.checkmark:hover {
+  box-shadow: inset 17px 17px 16px #b3b3b3,
+            inset -17px -17px 16px #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkmark {
+  box-shadow: none;
+  background-color: var(--color-primary);
+  transform: rotateX(360deg);
+}
+
+.checkContainer input:checked ~ .checkmark:hover {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+  left: 0.96em;
+  top: 0.7em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  box-shadow: 0.1em 0.1em 0em 0 rgba(0,0,0,0.3);
+  transform: rotate(45deg);
+}
 
 @media screen and (max-width: 830px) {
   .container {

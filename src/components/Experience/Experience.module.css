@@ -1,6 +1,16 @@
 .container {
   display: flex;
   flex-direction: column;
+  width: 70%;
+    margin: auto;
+}
+
+.title {
+  color: var(--color-text);
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .step {

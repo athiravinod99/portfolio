@@ -5,10 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 80px;
+  background-color: var(--color-secondary);
 }
 
 .content {
@@ -22,15 +21,19 @@
 .title {
   font-size: 72px;
   font-weight: 900;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
   font-family: var(--font-roboto);
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 70%,
     rgba(255, 255, 255, 0) 120%
   );
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.subtitle {
+  color: var(--color-secondary);
+  text-transform: uppercase;
 }
 
 .description {
@@ -42,7 +45,7 @@
 .contactBtn {
   text-decoration: none;
   background-color: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-bg);
   border-radius: 100px;
   font-size: 30px;
   font-weight: 600;
@@ -72,7 +75,7 @@
   }
 }
 
-.topBlur {
+/* .topBlur {
   position: absolute;
   width: 50vw;
   height: 50vw;
@@ -84,9 +87,9 @@
   background: rgba(25, 55, 109, 0.7);
   filter: blur(100px);
   z-index: 0;
-}
+} */
 
-.bottomBlur {
+/* .bottomBlur {
   position: absolute;
   width: 70vw;
   height: 50vw;
@@ -98,7 +101,7 @@
   background: rgba(25, 55, 109, 0.7);
   filter: blur(100px);
   z-index: 0;
-}
+} */
 
 @media screen and (max-width: 830px) {
   .container {
@@ -108,4 +111,15 @@
   .content {
     align-items: center;
   }
+}
+
+.icon {
+  color: var(--color-primary);
+  font-size: 65px !important;
+}
+
+.contactBox {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
 }

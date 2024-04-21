@@ -1,0 +1,29 @@
+.card {
+    color: var(--color-text);
+    border-radius: 10px;
+    background-color: var(--color-secondary) !important;
+    border-color: hsla(0, 0%, 100%, .1) !important;
+    /* -webkit-box-shadow: -1px 3px 39px 7px rgba(250,170,105,0.52) !important;
+-moz-box-shadow: -1px 3px 39px 7px rgba(250,170,105,0.52) !important;
+box-shadow: -1px 3px 38px 7px rgba(250,170,105,0.52) !important; */
+    /* -webkit-box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important;
+-moz-box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important;
+box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important; */
+    -webkit-box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
+    -moz-box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
+    box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
+    border-radius: 10px !important;
+}
+
+.title {
+    color: var(--color-primary);
+
+}
+
+.subtitle {
+    color: var(--color-text);
+}
+
+.content {
+    color: var(--color-text);
+}
