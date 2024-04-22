@@ -3,9 +3,9 @@ import { Grid, Card, CardContent, Typography } from "@mui/material";
 import styles from "./Projects.module.css";
 import travel from "../../assets/hero/travel.png";
 import { Title } from "../Title/Title";
+import { FlipCard } from "./FlipCard/FlipCard";
 
-
-const projects = [
+const projectsRow1 = [
   {
     id: 1,
     title: "Hospital Management System",
@@ -27,6 +27,9 @@ const projects = [
     description: "A tool for organizing tasks and tracking progress.",
     technologies: ["Angular", "Node.js", "MongoDB", "Bootstrap"],
   },
+];
+
+const projectsRow2 = [
   {
     id: 4,
     title: "E-commerce",
@@ -53,53 +56,23 @@ const projects = [
 export const Projects = () => {
   return (
     <section className={styles.container}>
-      <Title title="Latest Works" subtitle="Explore my popular projects" />
-      <Grid container spacing={2}>
-        {projects.map((project) => (
-          <Grid item xs={4} key={project.id}>
-            <div className={styles.flipCard}>
-              <div className={styles.flipCardInner}>
-                <Card
-                  className={styles.flipCardFront}
-                  style={{ border: "1px solid #ccc", height: "300px" }}
-                >
-                  <CardContent className={styles.cardContent}>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      style={{ width: "100%", height: "50%" }}
-                    />
-                    <Typography variant="h6" style={{ marginTop: "8px" }}>
-                      {project.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
-                <Card
-                  className={styles.flipCardBack}
-                  style={{
-                    border: "1px solid #ccc",
-                    height: "300px",
-                  }}
-                >
-                  <CardContent className={styles.cardContent}>
-                    <Typography variant="body1">
-                      {project.description}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      Technologies used:
-                    </Typography>
-                    <ul>
-                      {project.technologies.map((tech, index) => (
-                        <li key={index}>{tech}</li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </Grid>
-        ))}
-      </Grid>
+      <section className={styles.gridContainer}>
+        <Title title="Latest Works" subtitle="Explore my popular projects" />
+        <Grid container spacing={2}>
+          {projectsRow1.map((item) => 
+          <Grid item xs={4}>
+            <FlipCard image={item.image} title={item.title} description={item.description} technologies={item.technologies}/>
+          </Grid>)}       
+        </Grid>
+      </section>
+      <section className={styles.gridContainer}>
+        <Grid container spacing={2}>
+        {projectsRow2.map((item) => 
+          <Grid item xs={4}>
+            <FlipCard image={item.image} title={item.title} description={item.description} technologies={item.technologies}/>
+          </Grid>)}   
+        </Grid>
+      </section>
     </section>
   );
 };

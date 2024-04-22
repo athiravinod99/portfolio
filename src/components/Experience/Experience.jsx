@@ -46,24 +46,19 @@ const experiences = [
 ];
 const educationData = [
   {
-    year: 2010,
-    institution: "Primary School Name",
-    degree: "Primary Education",
+    year: "Govt. Model Engineering",
+    institution: "2017-2021",
+    degree: "Electronics & Communication",
   },
   {
-    year: 2016,
-    institution: "High School Name",
-    degree: "High School Diploma",
+    year: "ST. Teresa's C.G.H.S.S",
+    institution: "2015-2017",
+    degree: "Computer Science",
   },
   {
-    year: 2020,
-    institution: "University Name",
-    degree: "Bachelor's Degree in XYZ",
-  },
-  {
-    year: 2022,
-    institution: "Graduate School Name",
-    degree: "Master's Degree in ABC",
+    year: "ST. Teresa's C.G.H.S.S",
+    institution: "2015",
+    degree: "High School",
   },
 ];
 
@@ -83,22 +78,11 @@ export const Experience = () => {
     <div className={styles.container}>
       <Title title="My Resume" subtitle="Education & Experience" />
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <Grid container spacing={2}>
             {educationData.map((item, index) => (
               <Grid item xs={12} key={index}>
                 <Grid container spacing={2}>
-                  <Grid item xs={2}>
-                    <Stepper
-                      activeStep={currentStep === index ? 0 : -1}
-                      orientation="vertical"
-                      connector={<StepConnector />}
-                    >
-                      <Step>
-                        <StepLabel></StepLabel>
-                      </Step>
-                    </Stepper>
-                  </Grid>
                   <Grid item xs={10}>
                     <PortfolioCard
                       title={item.year}
@@ -112,10 +96,16 @@ export const Experience = () => {
                   </Grid>
                 </Grid>
               </Grid>
-            ))}
+            ))} 
           </Grid>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={2} display="flex" justifyContent="center">
+          <div className={styles.tabcontainer}>
+          <div className={styles.indicator}></div>
+            <div className={styles.scroller}></div>
+          </div>
+        </Grid>
+        <Grid item xs={5}>
           <Grid container spacing={2}>
             {experiences.map((experience, index) => (
               <Grid item xs={12} key={index}>

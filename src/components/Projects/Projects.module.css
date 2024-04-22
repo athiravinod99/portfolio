@@ -6,7 +6,15 @@
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
-  height: 500px;
+}
+
+.gridContainer {
+  margin-top: 50px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  height: 400px;
 }
 
 .title {

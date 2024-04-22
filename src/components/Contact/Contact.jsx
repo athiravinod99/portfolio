@@ -10,14 +10,10 @@ import {
 import styles from "./Contact.module.css";
 import MailIcon from "@mui/icons-material/Mail";
 import { Title } from "../Title/Title";
+import { PortfolioButton } from "../PortfolioButton/PortfolioButton";
 
 export const Contact = () => {
   const contactInfo = [
-    {
-      icon: <MailIcon />,
-      name: "Address",
-      description: "123 Street, City, Country",
-    },
     {
       icon: <MailIcon />,
       name: "Phone",
@@ -48,7 +44,7 @@ export const Contact = () => {
     <div className={styles.container}>
       <Title title="Contact" subtitle="Feel free to reachout!" />
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} style={{ width: "90%", margin: "auto"}}>
           <div>
             {contactInfo.map((info, index) => (
               <Grid container alignItems="center" spacing={1} key={index} className={styles.contactIcons}>
@@ -61,7 +57,6 @@ export const Contact = () => {
             ))}
           </div>
         </Grid>
-        {/* Second section with contact form */}
         <Grid item xs={12} md={6}>
           <Card className={styles.formCard}>
             <CardContent>
@@ -90,9 +85,8 @@ export const Contact = () => {
                     />
                   </Grid>
                   <Grid item xs={12}>
-                    <Button type="submit" variant="contained" color="primary">
-                      Submit
-                    </Button>
+                    <PortfolioButton 
+                     buttonText="Submit" />
                   </Grid>
                 </Grid>
               </form>
