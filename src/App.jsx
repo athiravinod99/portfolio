@@ -7,17 +7,19 @@ import { Skills } from "./components/Skills/Skills";
 import { Footer } from './components/Footer/Footer';
 import { Contact } from './components/Contact/Contact';
 import { Projects } from './components/Projects/Projects';
+import { Title } from "./components/Title/Title";
 
 function App() {
   return (
     <div className={styles.App}>
+      <Title />
       <Navbar />
       <Hero />
       <About />
       <Experience />
       <Skills />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

@@ -16,10 +16,11 @@
   }
   
   .tabs {
-    background-color: var(--color-secondary); /* set inactive tabs to white */
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%); /* set inactive tabs to white */
     width: 80%; /* occupy full width */
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55) !important;
     /* position: absolute;
     z-index: 999;
     bottom: 90%; */
@@ -34,7 +35,7 @@
   }
   
   .tab.Mui-selected {
-    color: yellow; /* set active tab text color */
+    color: var(--color-text) !important; /* set active tab text color */
     background-color: yellow; /* set active tab background color */
   }
 
@@ -42,7 +43,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
     padding: 20px 0;
   }
   .skillName {

@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import styles from "./Contact.module.css";
 import MailIcon from "@mui/icons-material/Mail";
+import { Title } from "../Title/Title";
 
 export const Contact = () => {
   const contactInfo = [
@@ -29,6 +30,11 @@ export const Contact = () => {
     },
     {
       icon: <MailIcon />,
+      name: "LinkedIn",
+      description: <a href="https://www.example.com">www.example.com</a>,
+    },
+    {
+      icon: <MailIcon />,
       name: "Website",
       description: <a href="https://www.example.com">www.example.com</a>,
     },
@@ -40,21 +46,16 @@ export const Contact = () => {
 
   return (
     <div className={styles.container}>
-      <Typography variant="h5" className={styles.title}>
-        Contact Me
-      </Typography>
-      <Typography variant="h6" className={styles.title}>
-        Feel free to reachout!
-      </Typography>
+      <Title title="Contact" subtitle="Feel free to reachout!" />
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <div>
             {contactInfo.map((info, index) => (
-              <Grid container alignItems="center" spacing={1} key={index}>
-                <Grid item>{info.icon}</Grid>
-                <Grid item>
-                  <Typography>{info.name}</Typography>
-                  <Typography>{info.description}</Typography>
+              <Grid container alignItems="center" spacing={1} key={index} className={styles.contactIcons}>
+                <Grid item className={styles.icon}>{info.icon}</Grid>
+                <Grid item className={styles.iconDetails}>
+                  <Typography variant="title" style={{fontWeight: 600}}>{info.name}</Typography>
+                  <Typography variant="subtitle">{info.description}</Typography>
                 </Grid>
               </Grid>
             ))}
@@ -62,22 +63,21 @@ export const Contact = () => {
         </Grid>
         {/* Second section with contact form */}
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card className={styles.formCard}>
             <CardContent>
-              <h2>Contact Us</h2>
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
-                    <TextField required label="Name" fullWidth />
+                    <TextField required label="Name" fullWidth className={styles.input}/>
                   </Grid>
                   <Grid item xs={12} sm={6}>
-                    <TextField required label="Email" type="email" fullWidth />
+                    <TextField required label="Email" type="email" fullWidth className={styles.input}/>
                   </Grid>
                   <Grid item xs={12}>
-                    <TextField required label="Phone" fullWidth />
+                    <TextField required label="Phone" fullWidth className={styles.input}/>
                   </Grid>
                   <Grid item xs={12}>
-                    <TextField required label="Subject" fullWidth />
+                    <TextField required label="Subject" fullWidth className={styles.input}/>
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
@@ -86,6 +86,7 @@ export const Contact = () => {
                       multiline
                       rows={4}
                       fullWidth
+                      className={styles.input}
                     />
                   </Grid>
                   <Grid item xs={12}>

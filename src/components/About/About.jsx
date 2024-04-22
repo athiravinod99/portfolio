@@ -11,6 +11,9 @@ import {
 import styles from "./About.module.css";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CallIcon from "@mui/icons-material/Call";
+import { Title } from "../Title/Title";
+import { PortfolioPair } from "../PortfolioPair/PortfolioPair";
+import { Certification } from "../Certification/Certification";
 
 export const About = () => {
   const checkboxItems = [
@@ -57,9 +60,7 @@ export const About = () => {
     <section className={styles.container} id="about">
       <Grid container spacing={2}>
         <Grid item xs={6}>
-          <Typography variant="h4" className={styles.title}>
-            About Me
-          </Typography>
+          <Title title="About Me" subtitle="Bringing Ideas to Life with Code" />
           <br />
           <Typography variant="h6" className={styles.paragraph}>
             I'm a frontend developer with experience in building responsive and
@@ -68,30 +69,10 @@ export const About = () => {
             multiple landing pages and created design systems.
           </Typography>
           <Grid container spacing={3} className={styles.info}>
-            <Grid item xs={6}>
-              <Typography variant="h6">Name:</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography>Athira Vinod</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h6">Date of Birth:</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography>April 16, 1999</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h6">Address:</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography>Ernakulam, Kerala, India</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h6">Pincode:</Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography>683110</Typography>
-            </Grid>
+            <PortfolioPair title="Name" value="Athira Vinod" />
+            <PortfolioPair title="Date of Birth" value="April 16, 1999" />
+            <PortfolioPair title="Address" value="Ernakulam, Kerala, India" />
+            <PortfolioPair title="Pincode" value="683110" />
           </Grid>
           <Card className={styles.card}>
             <Grid container>
@@ -122,20 +103,10 @@ export const About = () => {
         </Grid>
         <Grid item xs={6}>
           <Grid container className={styles.aboutDetails}>
-            <Grid item xs={12}>
-              <div className={styles.counterContainer}>
-                <div className={styles.counter}>
-                  <Typography variant="h4"><span id="experienceCount">0</span>
-                  <span>+</span></Typography>
-                  <span className={styles.countText}>years</span>
-                </div>
-                <div className={styles.counter}>
-                  <Typography variant="h4"><span id="projectsCount">0</span>
-                  <span>+</span></Typography>
-                  <span className={styles.countText}>Projects Completed: </span>
-                  
-                </div>
-              </div>
+            <Grid item xs={12} display="flex" justifyContent="space-around">
+              <Certification content="HackerRank Frontend Developer" cardContent="React"/>
+              <Certification content="Digital Skills: User Experience Accenture" cardContent="UX"/>
+              <Certification content="LinkedIn Learning Next js" cardContent="Next js"/>
             </Grid>
             <Grid item xs={12}>
               <div className={styles.checkboxGrid}>
@@ -143,7 +114,7 @@ export const About = () => {
                   <label key={index} className={styles.checkContainer}>
                     <input type="checkbox" checked="checked" />
                     <div className={styles.checkmark}></div>
-                    {item}
+                    <Typography variant="subtitle" className={styles.item}>{item}</Typography>
                   </label>
                 ))}
               </div>

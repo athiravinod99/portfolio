@@ -1,0 +1,11 @@
+/* Styles related to title */
+
+.title {
+    color: var(--color-subheading);
+    font-weight: 600 !important;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: var(--color-text);
+}

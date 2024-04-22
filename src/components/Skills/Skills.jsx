@@ -7,6 +7,7 @@ import htmlImg from "../../assets/hero/htmlImg.jpg";
 import javascriptImg from "../../assets/hero/javascriptImg.jpg";
 import sassImg from "../../assets/hero/sassImg.jpg";
 import githubImg from "../../assets/hero/githubImg.jpg";
+import { Title } from "../Title/Title";
 
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -65,14 +66,11 @@ export const Skills = () => {
       
     
     <div className={styles.skillsContainer}>
-    <Typography variant="h4" className={styles.title}>
-            Skills
-          </Typography>
+    <Title title="My Skills" subtitle="Professional Skills"/>
+          
       <Tabs
         value={activeTab}
         onChange={handleChangeTab}
-        textColor="secondary"
-        indicatorColor="secondary"
         aria-label="Skills Tabs"
         className={styles.tabs}
       >

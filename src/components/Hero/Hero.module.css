@@ -7,7 +7,7 @@
   justify-content: space-between;
   z-index: 1;
   padding: 80px;
-  background-color: var(--color-secondary);
+  background-color: rgb(31, 31, 31);
 }
 
 .content {
@@ -63,6 +63,41 @@
   animation-timing-function: ease-in-out;
 }
 
+.counter span {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@keyframes increment {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.aboutDetails {
+  height: 100%;
+  padding: 10px;
+}
+.counter #experienceCount,
+.counter #projectsCount {
+  animation: increment 1s infinite alternate;
+}
+
+.countText {
+  color: var(--color-text) !important;
+}
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
@@ -74,34 +109,6 @@
     transform: translate(0, -0px);
   }
 }
-
-/* .topBlur {
-  position: absolute;
-  width: 50vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 350px;
-  top: -128px;
-  left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
-} */
-
-/* .bottomBlur {
-  position: absolute;
-  width: 70vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
-  top: 246px;
-  right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
-} */
 
 @media screen and (max-width: 830px) {
   .container {

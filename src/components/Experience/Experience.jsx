@@ -11,6 +11,8 @@ import {
   StepConnector,
 } from "@mui/material";
 import { PortfolioCard } from "../PortfolioCard/PortfolioCard";
+import { Title } from "../Title/Title";
+
 
 const experiences = [
   {
@@ -79,9 +81,7 @@ export const Experience = () => {
 
   return (
     <div className={styles.container}>
-      <Typography variant="h4" className={styles.title}>
-        Experience
-      </Typography>
+      <Title title="My Resume" subtitle="Education & Experience" />
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <Grid container spacing={2}>

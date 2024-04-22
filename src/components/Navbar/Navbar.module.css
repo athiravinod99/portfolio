@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 60px;
   z-index: 2;
-  background-color: var(--color-secondary);
+  background-color: rgb(31, 31, 31);
 }
 
 .title {

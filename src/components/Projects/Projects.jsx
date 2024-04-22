@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
 import styles from "./Projects.module.css";
 import travel from "../../assets/hero/travel.png";
+import { Title } from "../Title/Title";
+
 
 const projects = [
   {
@@ -51,12 +53,7 @@ const projects = [
 export const Projects = () => {
   return (
     <section className={styles.container}>
-      <Typography variant="h5" className={styles.title}>
-        Latest Works
-      </Typography>
-      <Typography variant="h6" className={styles.subtitle}>
-        Explore my popular projects
-      </Typography>
+      <Title title="Latest Works" subtitle="Explore my popular projects" />
       <Grid container spacing={2}>
         {projects.map((project) => (
           <Grid item xs={4} key={project.id}>

@@ -1,15 +1,12 @@
-export const Title = () => {
-    return (
-        <div class="animated-title">
-  <div class="text-top">
-    <div>
-      <span>mimicking</span>
-      <span>apple's design</span>
-    </div>
-  </div>
-  <div class="text-bottom">
-    <div>for the win!</div>
-  </div>
-</div>
-    )
-}
+import { Typography } from "@mui/material";
+import styles from "./Title.module.css";
+
+export const Title = (props) => {
+
+  return (
+      <div className={styles.container}>
+        <Typography variant="h3" className={styles.title}>{props.title}</Typography>
+        <Typography variant="h4" className={styles.subtitle}>{props.subtitle}</Typography>
+      </div>
+  );
+};
