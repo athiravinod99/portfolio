@@ -1,7 +1,12 @@
 import React from "react";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
 import styles from "./Projects.module.css";
-import travel from "../../assets/hero/travel.png";
+import travel from "../../assets/hero/travel.jpg";
+import ecommerce from "../../assets/hero/ecommerce.jpg";
+import hospital from "../../assets/hero/hospital.jpg";
+import netflix from "../../assets/hero/netflix.jpg";
+import recipe from "../../assets/hero/recipe.png";
+import socialmedia from "../../assets/hero/socialmedia.jpg";
 import { Title } from "../Title/Title";
 import { FlipCard } from "./FlipCard/FlipCard";
 
@@ -9,23 +14,23 @@ const projectsRow1 = [
   {
     id: 1,
     title: "Hospital Management System",
-    image: travel,
-    description: "An online marketplace for buying and selling products.",
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    image: hospital,
+    description: "It is a Hospital Application that provides with personal medical care with highest quality, by employing a holistic approach to your health problems, in a professional and patient-friendly atmosphere.",
+    technologies: ["Angularjs, .Net, Web api, Bootstrap"],
   },
   {
     id: 2,
     title: "Netflix",
-    image: travel,
-    description: "A platform for connecting with friends and sharing updates.",
-    technologies: ["React", "Firebase", "Redux", "Material-UI"],
+    image: netflix,
+    description: "It is a responsive and dynamic streaming platform that closely resembles the user experience of Netflix. Users will be able to browse and stream a wide range of movies and TV shows seamlessly, enhancing their entertainment experience",
+    technologies: ["Reactjs, Axios Library, Material-UI"],
   },
   {
     id: 3,
     title: "Travel Website",
     image: travel,
-    description: "A tool for organizing tasks and tracking progress.",
-    technologies: ["Angular", "Node.js", "MongoDB", "Bootstrap"],
+    description: "A platform dedicated to travel, offering information, services, and resources related to tourism",
+    technologies: ["HTML5, CSS3, Bootstrap"],
   },
 ];
 
@@ -33,23 +38,23 @@ const projectsRow2 = [
   {
     id: 4,
     title: "E-commerce",
-    image: travel,
-    description: "A blog featuring travel stories, tips, and recommendations.",
-    technologies: ["Gatsby", "Contentful", "GraphQL", "Tailwind CSS"],
+    image: ecommerce,
+    description: "An ecommerce mobile app is a software application designed for smartphones and tablets that allows users to browse, select, and purchase products or services from an online store.",
+    technologies: ["Nextjs, CSS"],
   },
   {
     id: 5,
     title: "Social Media Application",
-    image: travel,
-    description: "A blog featuring travel stories, tips, and recommendations.",
-    technologies: ["Gatsby", "Contentful", "GraphQL", "Tailwind CSS"],
+    image: socialmedia,
+    description: "A React and Material-UI powered social media app that connects people, shares updates, and fosters meaningful interactions in a user-friendly interface.",
+    technologies: ["Reactjs, Contentful, GraphQL, Tailwind CSS"],
   },
   {
     id: 6,
     title: "Recipe Book",
-    image: travel,
-    description: "A blog featuring travel stories, tips, and recommendations.",
-    technologies: ["Gatsby", "Contentful", "GraphQL", "Tailwind CSS"],
+    image: recipe,
+    description: "We can add recipes and accordingly purchase the required ingredients for a recipe by adding it into the shopping list.",
+    technologies: ["Gatsby, Contentful, GraphQL, Tailwind CSS"],
   },
 ];
 

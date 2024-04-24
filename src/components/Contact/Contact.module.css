@@ -59,21 +59,21 @@
   background: #e3edf7;
   padding: 1.4em;
   border-radius: 10px;
-  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-	      -6px -6px 10px -1px rgba(255,255,255,0.7);
-  border: 1px solid rgba(0,0,0,0);
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: transform 0.5s;
   color: var(--color-primary);
 }
 
 .icon:hover {
-  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-	      inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-	      -0.5px -0.5px 0px rgba(255,255,255,1),
-	      0.5px 0.5px 0px rgba(0,0,0,0.15),
-	      0px 12px 10px -10px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateY(0.5em);
 }
 
@@ -133,4 +133,127 @@
   .links {
     align-items: center;
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: #212121 !important;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60) !important;
+  transition: .2s ease-in-out;
+  position: relative;
+}
+
+.linkedIn {
+  color: var(--color-text);
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: white !important;
+}
+
+.card1:hover .linkedIn {
+  color: blueviolet !important;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: #212121 !important;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60) !important;
+  transition: .2s ease-in-out;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: white !important;
+}
+
+.card2:hover .github {
+  color: black !important;
+}
+
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: #212121 !important;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60) !important;
+  transition: .2s ease-in-out;
+}
+
+.whatsapp {
+  color: var(--color-text);
+}
+
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: white !important;
+}
+
+.card3:hover .whatsapp {
+  color: #00ff00 !important;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: #212121 !important;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60) !important;
+  transition: .2s ease-in-out;
+  position: relative !important;
+}
+
+.gmail {
+  color: var(--color-text);
+}
+
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: white !important;
+}
+
+.card4:hover .gmail {
+  color: skyblue !important;
+}
+
+
+.iconHead {
+  color: var(--color-text);
+  text-transform: capitalize;
+  margin: 50px !important;
 }

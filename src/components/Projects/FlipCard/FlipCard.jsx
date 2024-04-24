@@ -1,22 +1,24 @@
 import styles from "./FlipCard.module.css"
 import { Grid, Card, CardContent, Typography } from "@mui/material";
-import travel from "../../../assets/hero/travel.png";
 
 export const FlipCard = (props) => {
     return (
-        <div className={styles.flipCard}>
+      <div className={styles.flipCard}>
         <div className={styles.flipCardInner}>
           <Card
             className={styles.flipCardFront}
             style={{ border: "1px solid #ccc", height: "300px" }}
           >
             <CardContent className={styles.cardContent}>
-              <img
-                src={props.image}
-                alt="travel"
-                style={{ width: "100%", height: "100%" }}
-              />
-              <Typography variant="h6" style={{ marginTop: "8px" }}>
+                <img
+                  src={props.image}
+                  alt="travel"
+                  className={styles.image}
+                />
+              <Typography variant="body1" className={styles.subtitle}>
+                {props.title}
+              </Typography>
+              <Typography variant="h6" className={styles.cardTitle}>
                 {props.title}
               </Typography>
             </CardContent>
@@ -29,18 +31,15 @@ export const FlipCard = (props) => {
             }}
           >
             <CardContent className={styles.cardContent}>
-              <Typography variant="body1">
+              <Typography variant="body1" className={styles.description}>
                 {props.description}
               </Typography>
-              <Typography variant="subtitle1">
-                {props.technologies}
+              <Typography variant="body1" className={styles.description}>
+                Technologies used: {props?.technologies}
               </Typography>
-              <ul>
-               <li>react</li>
-              </ul>
             </CardContent>
           </Card>
         </div>
       </div>
-    )
+    );
 }
