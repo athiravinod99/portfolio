@@ -78,23 +78,23 @@ export const About = () => {
             <Grid container>
               <Grid item xs={6}>
                 <Grid container alignItems="center" spacing={1}>
-                  <Grid item>
+                  <Grid item xs={2} className={styles.boxItems}>
                     <MailOutlineIcon className={styles.icon} />
                   </Grid>
-                  <Grid item>
-                    <Typography>Email me</Typography>
-                    <Typography>athiravinod.mec@gmail.com</Typography>
+                  <Grid item xs={10} >
+                    <Typography variant="body1" className={styles.cardText}>Email me</Typography>
+                    <Typography variant="body1" className={styles.cardText}>athiravinod.mec@gmail.com</Typography>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item xs={6}>
                 <Grid container alignItems="center" spacing={1}>
-                  <Grid item>
+                  <Grid item xs={2} className={styles.boxItems}>
                     <CallIcon className={styles.icon} />
                   </Grid>
-                  <Grid item>
-                    <Typography>Make a call</Typography>
-                    <Typography>9995331498</Typography>
+                  <Grid item xs={10}>
+                    <Typography variant="body1" className={styles.cardText}>Make a call</Typography>
+                    <Typography variant="body1" className={styles.cardText}>9995331498</Typography>
                   </Grid>
                 </Grid>
               </Grid>

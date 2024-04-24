@@ -77,20 +77,27 @@
 
 .card {
   color: var(--color-text);
-  border-radius: 40%;
-  background-color: var(--color-secondary) !important;
-  -webkit-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.52) !important;
-  -moz-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.52) !important;
-  box-shadow: -1px 3px 38px 7px rgba(250, 170, 105, 0.52) !important;
+  border: 0.5px solid var(--color-primary);
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%) !important;
   border-radius: 10px !important;
+  width: 80% !important;
+  margin-top: 20px;
+  padding: 5px;
 }
 
+.cardText {
+  color: var(--color-text);
+}
+
+.boxItems {
+  background-color: var(--color-bg);
+  border-radius: 50%;
+}
 
 .icon {
   color: var(--color-primary);
-  background-color: black;
-  border-radius: 50%;
   width: 30px;
+
 }
 
 .counter span {
