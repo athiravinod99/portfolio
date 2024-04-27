@@ -12,4 +12,6 @@
 
 .subtitle {
     color: var(--color-text);
+    text-transform: uppercase;
+    font-weight: 400;
 }
