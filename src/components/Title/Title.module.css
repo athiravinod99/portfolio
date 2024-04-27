@@ -1,5 +1,9 @@
 /* Styles related to title */
 
+.container {
+    margin: 10px 0 30px 0;
+}
+
 .title {
     color: var(--color-subheading);
     font-weight: 600 !important;

@@ -78,7 +78,7 @@ export const Experience = () => {
     <div className={styles.container}>
       <Title title="My Resume" subtitle="Education & Experience" />
       <Grid container spacing={2}>
-        <Grid item xs={5}>
+        <Grid item xs={6}>
           <Grid container spacing={2}>
             {educationData.map((item, index) => (
               <Grid item xs={12} key={index}>
@@ -99,13 +99,13 @@ export const Experience = () => {
             ))} 
           </Grid>
         </Grid>
-        <Grid item xs={2} display="flex" justifyContent="center">
+        {/* <Grid item xs={2} display="flex" justifyContent="center">
           <div className={styles.tabcontainer}>
           <div className={styles.indicator}></div>
             <div className={styles.scroller}></div>
           </div>
-        </Grid>
-        <Grid item xs={5}>
+        </Grid> */}
+        <Grid item xs={6}>
           <Grid container spacing={2}>
             {experiences.map((experience, index) => (
               <Grid item xs={12} key={index}>

@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { Tabs, Tab, Typography, Grid, Container } from "@mui/material";
 import styles from "./Skills.module.css";
-import react from "../../assets/hero/react.png";
-import cssImg from "../../assets/hero/cssImg.jpg";
-import htmlImg from "../../assets/hero/htmlImg.jpg";
-import javascriptImg from "../../assets/hero/javascriptImg.jpg";
-import sassImg from "../../assets/hero/sassImg.jpg";
-import githubImg from "../../assets/hero/githubImg.jpg";
+import bootstrap from "../../assets/hero/bootstrap.svg";
+import reactImg from "../../assets/hero/reactImg.svg";
+import htmlImg from "../../assets/hero/htmlImg.svg";
 import { Title } from "../Title/Title";
+import sassImg from "../../assets/hero/sassImg.svg";
+import tailwindImg from "../../assets/hero/tailwindImg.svg";
+import gitImg from "../../assets/hero/gitImg.svg";
+import jsImg from "../../assets/hero/jsImg.svg";
+import cssImg from "../../assets/hero/cssImg.svg";
+import angularImg from "../../assets/hero/angularImg.svg";
+import nodejs from "../../assets/hero/nodejs.svg";
+import tsImg from "../../assets/hero/tsImg.svg";
+import pythonImg from "../../assets/hero/pythonImg.svg";
+import muiImg from "../../assets/hero/muiImg.svg";
 import LinearProgress from "@mui/material/LinearProgress";
 
 export const Skills = () => {
@@ -19,43 +26,38 @@ export const Skills = () => {
       skills: [
         { name: "HTML", value: 90, img: htmlImg },
         { name: "CSS", value: 80, img: cssImg },
-        { name: "JavaScript", value: 85, img: javascriptImg },
-        { name: "TypeScript", value: 85, img: javascriptImg },
-        { name: "Python", value: 85, img: react },
+        { name: "JavaScript", value: 85, img: jsImg },
+        { name: "TypeScript", value: 85, img: tsImg },
+        { name: "Python", value: 85, img: pythonImg },
         { name: "SASS/LESS", value: 85, img: sassImg },
       ],
     },
     {
       title: "Frameworks",
       skills: [
-        { name: "React js", value: 80, img: react },
-        { name: "Angular js", value: 75, img: cssImg },
-        { name: "Redux", value: 70, img: cssImg },
-        { name: "Bootstrap js", value: 70, img: cssImg },
-        { name: "Material UI", value: 70, img: cssImg },
-        { name: "Tailwind CSS", value: 70, img: cssImg },
+        { name: "React js", value: 80, img: reactImg },
+        { name: "Angular js", value: 75, img: angularImg },
+        { name: "Next js", value: 70, img: nodejs },
+        { name: "Bootstrap js", value: 70, img: bootstrap },
+        { name: "Material UI", value: 70, img: muiImg },
+        { name: "Tailwind CSS", value: 70, img: tailwindImg },
       ],
     },
     {
       title: "API Tools",
       skills: [
-        { name: "Github", value: 80, img: githubImg },
-        { name: "Bitbucket", value: 70, img: githubImg },
-        { name: "Smart Git", value: 70, img: githubImg },
-        { name: "JIRA", value: 70, img: githubImg },
-        { name: "Swagger", value: 70, img: githubImg },
-        { name: "Postman", value: 70, img: githubImg },
+        { name: "Axios Library", img: gitImg },
+        { name: "Swagger", img: bootstrap },
+        { name: "Postman", img: bootstrap },
       ],
     },
     {
-      title: "API Tools",
+      title: "DevOps",
       skills: [
-        { name: "Github", value: 80, img: githubImg },
-        { name: "Bitbucket", value: 70, img: githubImg },
-        { name: "Smart Git", value: 70, img: githubImg },
-        { name: "JIRA", value: 70, img: githubImg },
-        { name: "Swagger", value: 70, img: githubImg },
-        { name: "Postman", value: 70, img: githubImg },
+        { name: "Github", img: bootstrap },
+        { name: "Bitbucket",img: bootstrap },
+        { name: "Smart Git", img: bootstrap },
+        { name: "JIRA", value: 70, img: bootstrap },
       ],
     },
   ];
@@ -81,6 +83,18 @@ export const Skills = () => {
             className={`${styles.tabButton} ${
               activeTab === index ? styles.activeTabButton : ""
             }`}
+            style={{
+              backgroundColor:
+              activeTab === index ? "orange" : "rgb(31, 31, 31)",
+              color: activeTab === index ? "black" : "white",
+              flexGrow: 1,
+              border:
+              activeTab === index ? "3px solid orange" : "none",
+              borderBottom:
+              activeTab === index ? "none" : "3px solid orange",
+              fontWeight: activeTab === index ? "600" : "500",
+              indicatorColor: activeTab === index ? "orange" : "rgb(31, 31, 31)",
+            }}
           />
         ))}
       </Tabs>
@@ -91,13 +105,19 @@ export const Skills = () => {
             className={index < 3 ? styles.skillLine1 : styles.skillLine2}
           >
             <Grid container>
-              <Grid item xs={4}>
+              <Grid item xs={2}>
                 <img src={skill.img} alt={skill.name} className={styles.img} />
               </Grid>
-              <Grid item xs={8}>
-                <Typography variant="h6" className={styles.skillName}>
-                  {skill.name} {skill.value ? `${skill.value}%` : ""}
+              <Grid item xs={10}>
+                <div className={styles.skillDetails}>
+                <Typography variant="body1" className={styles.skillName}>
+                  {skill.name} 
                 </Typography>
+                <Typography variant="body1" className={styles.skillValue}>
+                  {skill.value ? `${skill.value}%` : ""}
+                </Typography>
+                </div>
+                
                 <div className={styles.progressBarContainer}>
                   <div
                     className={styles.progressBar}

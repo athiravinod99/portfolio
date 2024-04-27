@@ -85,3 +85,94 @@
     z-index: 1;
   }
 }
+/* styles.css */
+
+/* Styles for the astronaut container */
+.astronaut {
+  position: relative;
+  width: 150px; /* Adjust according to your design */
+  height: 250px; /* Adjust according to your design */
+}
+
+/* Styles for the astronaut's head */
+.head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Adjust according to your design */
+  height: 80px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+  border-radius: 50%;
+}
+
+/* Styles for the left arm */
+.arm-left {
+  position: absolute;
+  top: 50px; /* Adjust according to your design */
+  left: -20px; /* Adjust according to your design */
+  width: 20px; /* Adjust according to your design */
+  height: 100px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+}
+
+/* Styles for the right arm */
+.arm-right {
+  position: absolute;
+  top: 50px; /* Adjust according to your design */
+  right: -20px; /* Adjust according to your design */
+  width: 20px; /* Adjust according to your design */
+  height: 100px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+}
+
+/* Styles for the astronaut's body */
+.body {
+  position: absolute;
+  top: 80px; /* Adjust according to your design */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* Adjust according to your design */
+  height: 120px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+}
+
+/* Styles for the panel on the astronaut's body */
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Adjust according to your design */
+  background-color: #007bff; /* Adjust according to your design */
+}
+
+/* Styles for the left leg */
+.leg-left {
+  position: absolute;
+  bottom: 0;
+  left: 30px; /* Adjust according to your design */
+  width: 20px; /* Adjust according to your design */
+  height: 100px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+}
+
+/* Styles for the right leg */
+.leg-right {
+  position: absolute;
+  bottom: 0;
+  right: 30px; /* Adjust according to your design */
+  width: 20px; /* Adjust according to your design */
+  height: 100px; /* Adjust according to your design */
+  background-color: silver; /* Adjust according to your design */
+}
+
+/* Styles for the schoolbag */
+.schoolbag {
+  position: absolute;
+  top: 100px; /* Adjust according to your design */
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust according to your design */
+  background-color: #28a745; /* Adjust according to your design */
+}

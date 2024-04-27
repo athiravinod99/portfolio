@@ -13,7 +13,6 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CallIcon from "@mui/icons-material/Call";
 import { Title } from "../Title/Title";
 import { PortfolioPair } from "../PortfolioPair/PortfolioPair";
-import { Certification } from "../Certification/Certification";
 
 export const About = () => {
   const checkboxItems = [
@@ -74,6 +73,9 @@ export const About = () => {
             <PortfolioPair title="Address" value="Ernakulam, Kerala, India" />
             <PortfolioPair title="Pincode" value="683110" />
           </Grid>
+        </Grid>
+        <Grid item xs={6}>
+          <Grid container className={styles.aboutDetails}>
           <Card className={styles.card}>
             <Grid container>
               <Grid item xs={6}>
@@ -100,14 +102,6 @@ export const About = () => {
               </Grid>
             </Grid>
           </Card>
-        </Grid>
-        <Grid item xs={6}>
-          <Grid container className={styles.aboutDetails}>
-            <Grid item xs={12} display="flex" justifyContent="space-around">
-              <Certification content="HackerRank Frontend Developer" cardContent="React"/>
-              <Certification content="Digital Skills: User Experience Accenture" cardContent="UX"/>
-              <Certification content="LinkedIn Learning Next js" cardContent="Next js"/>
-            </Grid>
             <Grid item xs={12}>
               <div className={styles.checkboxGrid}>
                 {checkboxItems.map((item, index) => (
