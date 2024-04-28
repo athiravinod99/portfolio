@@ -67,10 +67,14 @@
   }
 
   .subtitle {
-    text-transform: uppercase;
-    color: var(--color-text);
+    text-transform: capitalize;
+    color: var(--color-primary);
     font-weight: 500 !important;
+    display: flex;
+  }
 
+  .icon {
+    color: var(--color-text);
   }
 
   .description {
@@ -88,7 +92,14 @@
     height: 80%;
     margin: auto;
     object-fit: fill;
-    -webkit-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.2) !important;
+    /* -webkit-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.2) !important;
     -moz-box-shadow: -1px 3px 39px 7px rgba(250, 170, 105, 0.2) !important;
-    box-shadow: -1px 3px 38px 7px rgba(250, 170, 105, 0.2) !important;
+    box-shadow: -1px 3px 38px 7px rgba(250, 170, 105, 0.2) !important; */
+  }
+
+  .moreDetails {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
   }

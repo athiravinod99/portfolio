@@ -34,10 +34,23 @@
     box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
   }
 
-  .content {
-    text-align: center;
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    height: 10%;
+    height: 100%;
+  }
+
+  .organization {
+    color: #ffb144;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+  }
+
+  .content {
+    max-width: 80%;
   }
 
   

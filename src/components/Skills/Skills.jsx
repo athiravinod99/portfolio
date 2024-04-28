@@ -44,19 +44,20 @@ export const Skills = () => {
       ],
     },
     {
-      title: "API Tools",
+      title: "Design & API Tools ",
       skills: [
-        { name: "Axios Library", img: gitImg },
-        { name: "Swagger", img: bootstrap },
-        { name: "Postman", img: bootstrap },
+        { name: "Axios Library",  value: 70, img: gitImg },
+        { name: "Swagger",  value: 70, img: bootstrap },
+        { name: "Postman",  value: 70, img: bootstrap },
+        { name: "Figma",  value: 70, img: bootstrap },
       ],
     },
     {
       title: "DevOps",
       skills: [
-        { name: "Github", img: bootstrap },
-        { name: "Bitbucket",img: bootstrap },
-        { name: "Smart Git", img: bootstrap },
+        { name: "Github",  value: 70, img: bootstrap },
+        { name: "Bitbucket",  value: 70, img: bootstrap },
+        { name: "Smart Git",  value: 70, img: bootstrap },
         { name: "JIRA", value: 70, img: bootstrap },
       ],
     },

@@ -1,5 +1,7 @@
 import styles from "./FlipCard.module.css"
 import { Grid, Card, CardContent, Typography } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export const FlipCard = (props) => {
     return (
@@ -15,9 +17,10 @@ export const FlipCard = (props) => {
                   alt="travel"
                   className={styles.image}
                 />
-              <Typography variant="body1" className={styles.subtitle}>
-                {props.title}
-              </Typography>
+                <div className={styles.moreDetails}>
+                <Typography variant="body1" className={styles.subtitle}><ArrowOutwardIcon />Live</Typography>
+                <Typography variant="body1" className={styles.icon}><GitHubIcon /></Typography>
+                </div>
               <Typography variant="h6" className={styles.cardTitle}>
                 {props.title}
               </Typography>

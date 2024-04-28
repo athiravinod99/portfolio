@@ -1,23 +1,10 @@
 .card {
     color: var(--color-text);
     border-radius: 10px;
-    /* background-color: rgb(31, 31, 31) !important;
-    border-color: var(--color-primary) !important;
-    border: 1px solid; */
     border-radius: 30px !important;
- background: #212121 !important;
- box-shadow: 15px 15px 30px rgb(25, 25, 25),
-             -15px -15px 30px rgb(60, 60, 60) !important;
-    /* -webkit-box-shadow: -1px 3px 39px 7px rgba(250,170,105,0.52) !important;
--moz-box-shadow: -1px 3px 39px 7px rgba(250,170,105,0.52) !important;
-box-shadow: -1px 3px 38px 7px rgba(250,170,105,0.52) !important; */
-    /* -webkit-box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important;
--moz-box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important;
-box-shadow: -13px -20px 39px 7px rgba(250,170,105,0.52) !important; */
-    /* -webkit-box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
-    -moz-box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
-    box-shadow: inset -13px -20px 39px 7px rgba(250, 170, 105, 0.52) !important;
-    border-radius: 10px !important; */
+    background: #212121 !important;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(60, 60, 60) !important;
 }
 
 .title {

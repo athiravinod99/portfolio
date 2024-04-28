@@ -4,13 +4,14 @@ import { Title } from '../Title/Title';
 import styles from './Certification.module.css';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import reactImg from "../../assets/hero/reactImg.svg"
 export const Certification = () => {
   const certifications = [
-    { content: 'HackerRank Frontend Developer', cardContent: 'React' },
-    { content: 'Digital Skills: User Experience Accenture', cardContent: 'UX' },
-    { content: 'LinkedIn Learning Next js', cardContent: 'Next js' },
-    { content: 'Angular js', cardContent: 'Angular' },
-    { content: 'Python', cardContent: 'Python' },
+    { content: 'Frontend Developer (React)', title: 'React', organization: 'HackerRank' , link: '#', img: reactImg },
+    { content: 'Digital Skills: User Experience', title: 'UX', organization: 'Accenture', link: '#', img: reactImg},
+    { content: 'Learning Next js', title: 'Next js', organization: 'LinkedIn', link:'#', img: reactImg },
+    { content: 'Assessment Skill Angular', title: 'Angular', organization: 'HackerRank', link:'#', img: reactImg },
+    { content: 'Crash course on Python', title: 'Python', organization: 'Google', link:'#', img: reactImg },
   ];
 
   const [startIndex, setStartIndex] = useState(0);
@@ -36,7 +37,12 @@ export const Certification = () => {
         </div>
         <div className={styles.cards}>
           {certifications.slice(startIndex, startIndex + 3).map((certification, index) => (
-            <CertificationCard key={index} content={certification.content} cardContent={certification.cardContent} />
+            <CertificationCard key={index} 
+            image={certification.img}
+            title={certification.title}
+            organization={certification.organization} 
+            content={certification.content} 
+            link={certification.link}/>
           ))}
         </div>
         <div className={styles.buttonContainer}>

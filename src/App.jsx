@@ -13,7 +13,6 @@ import { Certification } from "./components/Certification/Certification";
 function App() {
   return (
     <div className={styles.App}>
-      <Title />
       <Navbar />
       <Hero />
       <About />
