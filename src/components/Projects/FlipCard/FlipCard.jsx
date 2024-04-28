@@ -26,22 +26,6 @@ export const FlipCard = (props) => {
               </Typography>
             </CardContent>
           </Card>
-          <Card
-            className={styles.flipCardBack}
-            style={{
-              border: "1px solid #ccc",
-              height: "300px",
-            }}
-          >
-            <CardContent className={styles.cardContent}>
-              <Typography variant="body1" className={styles.description}>
-                {props.description}
-              </Typography>
-              <Typography variant="body1" className={styles.description}>
-                Technologies used: {props?.technologies}
-              </Typography>
-            </CardContent>
-          </Card>
         </div>
       </div>
     );

@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { PortfolioCard } from "../PortfolioCard/PortfolioCard";
 import { Title } from "../Title/Title";
+import { MoreDetails } from "./MoreDetails/MoreDetails";
 
 
 const experiences = [
@@ -112,7 +113,7 @@ export const Experience = () => {
                 <Grid container spacing={2}>
                   <Grid item xs={2}></Grid>
                   <Grid item xs={10}>
-                    <PortfolioCard
+                    <MoreDetails
                       title={experience.title}
                       subtitle={experience.company}
                       content={
