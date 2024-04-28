@@ -1,3 +1,4 @@
+/* Styles related to hero section */
 @import "../../variables.css";
 
 .container {
@@ -23,16 +24,14 @@
   font-weight: 900;
   margin-bottom: 35px;
   font-family: var(--font-roboto);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(255, 255, 255, 0) 120%);
   -webkit-background-clip: text;
 }
 
 .subtitle {
-  color: var(--color-secondary);
+  color: var(--color-subheading);
   text-transform: uppercase;
 }
 
@@ -42,18 +41,7 @@
   margin-bottom: 52px;
 }
 
-.contactBtn {
-  text-decoration: none;
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  border-radius: 100px;
-  font-size: 30px;
-  font-weight: 600;
-  padding: 17px 26px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.heroImg {
+.hero__img {
   width: 50%;
   z-index: 1;
   border-radius: 50%;
@@ -74,37 +62,37 @@
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.1);
   }
 }
 
-.counterContainer {
+.counter__container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
 }
 
-.aboutDetails {
-  height: 100%;
-  padding: 10px;
-}
 .counter #experienceCount,
 .counter #projectsCount {
   animation: increment 1s infinite alternate;
 }
 
-.countText {
+.count__text {
   color: var(--color-text) !important;
 }
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(0, 10px);
   }
+
   100% {
     transform: translate(0, -0px);
   }
@@ -125,9 +113,8 @@
   font-size: 65px !important;
 }
 
-.contactBox {
+.contact__box {
   display: flex;
   justify-content: space-between;
   width: 40%;
 }
-

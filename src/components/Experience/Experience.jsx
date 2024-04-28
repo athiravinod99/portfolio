@@ -1,19 +1,12 @@
+//Resume section
 import React, { useState, useEffect } from "react";
 import styles from "./Experience.module.css";
 import {
-  Card,
-  Typography,
-  CardContent,
   Grid,
-  Stepper,
-  Step,
-  StepLabel,
-  StepConnector,
 } from "@mui/material";
 import { PortfolioCard } from "../PortfolioCard/PortfolioCard";
 import { Title } from "../Title/Title";
 import { MoreDetails } from "./MoreDetails/MoreDetails";
-
 
 const experiences = [
   {
@@ -35,14 +28,14 @@ const experiences = [
     company: "Terrific Minds",
     date: "Sept 2022 - Jan 2023",
     description:
-      "Collaborated on e‑commerce projects, for dynamic and interactive website that ensured high traffic page views including optimized checkout pages that increased user clicks, using SASS/ LESS, HTML 5, Tailwind CSS and Magento's page builder including cross browser development",
+      "Collaborated on e‑commerce projects, for dynamic and interactive website that ensured high traffic page views including optimized checkout pages that increased user clicks",
   },
   {
     title: "Developer I",
     company: "UST",
     date: "Aug 2021 - Aug 2022",
     description:
-      "Collaborated on e‑commerce projects, for dynamic and interactive website that ensured high traffic page views including optimized checkout pages that increased user clicks, using SASS/ LESS, HTML 5, Tailwind CSS and Magento's page builder including cross browser development",
+      "Conducted comprehensive code reviews, efficiently identified, and resolved bugs to ensure optimal functionality, including integration into CI/CD pipeline for seamless delivery",
   },
 ];
 const educationData = [
@@ -97,15 +90,9 @@ export const Experience = () => {
                   </Grid>
                 </Grid>
               </Grid>
-            ))} 
+            ))}
           </Grid>
         </Grid>
-        {/* <Grid item xs={2} display="flex" justifyContent="center">
-          <div className={styles.tabcontainer}>
-          <div className={styles.indicator}></div>
-            <div className={styles.scroller}></div>
-          </div>
-        </Grid> */}
         <Grid item xs={6}>
           <Grid container spacing={2}>
             {experiences.map((experience, index) => (
@@ -121,6 +108,7 @@ export const Experience = () => {
                           <p>{experience.date}</p>
                         </div>
                       }
+                      description={experience.description}
                     />
                   </Grid>
                 </Grid>

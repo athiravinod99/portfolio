@@ -1,5 +1,6 @@
+//Project section
 import React from "react";
-import { Grid, Card, CardContent, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import styles from "./Projects.module.css";
 import travel from "../../assets/hero/travel.jpg";
 import ecommerce from "../../assets/hero/ecommerce.jpg";
@@ -73,7 +74,7 @@ const projectsRow2 = [
 export const Projects = () => {
   return (
     <section className={styles.container}>
-      <section className={styles.gridContainer}>
+      <section className={styles.grid__container}>
         <Title title="Latest Works" subtitle="Explore my popular projects" />
         <Grid container spacing={2}>
           {projectsRow1.map((item) => 
@@ -82,7 +83,7 @@ export const Projects = () => {
           </Grid>)}       
         </Grid>
       </section>
-      <section className={styles.gridContainer}>
+      <section className={styles.grid__container}>
         <Grid container spacing={2}>
         {projectsRow2.map((item) => 
           <Grid item xs={4}>

@@ -1,10 +1,11 @@
+//Experience Card
 import React from "react";
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import styles from "./MoreDetails.module.css";
 
-export const MoreDetails = ({ title, subtitle, content }) => {
+export const MoreDetails = ({ title, subtitle, content, description }) => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.card__container}>
       <Card className={styles.card}>
         <CardContent>
           <Typography variant="h5" component="h2" className={styles.title}>
@@ -24,8 +25,7 @@ export const MoreDetails = ({ title, subtitle, content }) => {
       </Card>
       <Card className={`${styles.card} ${styles.back}`}>
         <CardContent>
-          {/* Additional content to be shown on the back side */}
-          <Typography variant="body1">Additional Content</Typography>
+          <Typography variant="body1" className={styles.content}>{description}</Typography>
         </CardContent>
       </Card>
     </div>

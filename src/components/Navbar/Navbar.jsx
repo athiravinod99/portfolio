@@ -1,5 +1,5 @@
+// Navbar component
 import React, { useState } from "react";
-
 import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
@@ -12,20 +12,20 @@ export const Navbar = () => {
       </a>
       <div className={styles.menu}>
         <ul
-          className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+          className={`${styles.menu__items} ${menuOpen && styles.menu__open}`}
           onClick={() => setMenuOpen(false)}
         >
           <li>
-            <a href="#about">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#resume">Resume</a>
           </li>
           <li>
-            <a href="#projects">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
             <a href="#projects">Projects</a>

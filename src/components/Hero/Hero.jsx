@@ -1,3 +1,4 @@
+//Hero section
 import React, { useState, useEffect } from "react";
 import about from "../../assets/hero/about.jpg";
 import styles from "./Hero.module.css";
@@ -58,7 +59,7 @@ export const Hero = () => {
 
   return (
     <section className={styles.container}>
-      <Grid container spacing={2} >
+      <Grid container spacing={2}>
         <Grid item xs={6}>
           <div className={styles.content}>
             <Typography variant="h6" className={styles.subtitle}>
@@ -68,7 +69,7 @@ export const Hero = () => {
               Hi, I'm {displayText}
             </Typography>
             <p className={styles.description}>Frontend Developer</p>
-            <div className={styles.contactBox}>
+            <div className={styles.contact__box}>
               <PortfolioButton buttonText="Contact Me" />
               <DownloadForOfflineRoundedIcon className={styles.icon} />
             </div>
@@ -76,22 +77,29 @@ export const Hero = () => {
         </Grid>
         <Grid item xs={4}>
           {" "}
-          <img src={about} alt="Hero image of me" className={styles.heroImg} />
+          <img
+            src={about}
+            alt="Hero image of me"
+            className={styles.hero__img}
+          />
         </Grid>
         <Grid item xs={2}>
-        <div className={styles.counterContainer}>
-                <div className={styles.counter}>
-                  <Typography variant="h3"><span id="experienceCount">0</span>
-                  <span>+</span></Typography>
-                  <span className={styles.countText}>Years of experience</span>
-                </div>
-                <div className={styles.counter}>
-                  <Typography variant="h3"><span id="projectsCount">0</span>
-                  <span>+</span></Typography>
-                  <span className={styles.countText}>Projects completed</span>
-                  
-                </div>
-              </div>
+          <div className={styles.counter__container}>
+            <div className={styles.counter}>
+              <Typography variant="h3">
+                <span id="experienceCount">0</span>
+                <span>+</span>
+              </Typography>
+              <span className={styles.count__text}>Years of experience</span>
+            </div>
+            <div className={styles.counter}>
+              <Typography variant="h3">
+                <span id="projectsCount">0</span>
+                <span>+</span>
+              </Typography>
+              <span className={styles.count__text}>Projects completed</span>
+            </div>
+          </div>
         </Grid>
       </Grid>
     </section>
