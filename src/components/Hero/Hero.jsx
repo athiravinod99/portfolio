@@ -1,6 +1,7 @@
 //Hero section
 import React, { useState, useEffect } from "react";
 import about from "../../assets/hero/about.jpg";
+import myImg from "../../assets/hero/myImg.png";
 import styles from "./Hero.module.css";
 import { Typography, Grid } from "@mui/material";
 import DownloadForOfflineRoundedIcon from "@mui/icons-material/DownloadForOfflineRounded";
@@ -75,10 +76,9 @@ export const Hero = () => {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
-          {" "}
+        <Grid item xs={4} className={styles.img__bg}>
           <img
-            src={about}
+            src={myImg}
             alt="Hero image of me"
             className={styles.hero__img}
           />

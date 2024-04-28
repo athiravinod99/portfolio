@@ -1,5 +1,5 @@
 //Resume section
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Experience.module.css";
 import {
   Grid,
@@ -69,7 +69,7 @@ export const Experience = () => {
   }, [currentStep]);
 
   return (
-    <div className={styles.container}>
+    <div  className={styles.container}>
       <Title title="My Resume" subtitle="Education & Experience" />
       <Grid container spacing={2}>
         <Grid item xs={6}>

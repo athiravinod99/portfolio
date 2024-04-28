@@ -5,6 +5,14 @@
   width: 100%;
   height: 130px;
   perspective: 1000px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card__container.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card {

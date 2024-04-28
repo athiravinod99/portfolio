@@ -3,9 +3,15 @@
     border-radius: 10px;
     border-radius: 30px !important;
     background: #212121 !important;
-    /* box-shadow: 15px 15px 30px rgb(25, 25, 25),
-        -15px -15px 30px rgb(60, 60, 60) !important; */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.card.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .title {
     color: var(--color-primary);

@@ -15,7 +15,6 @@
 
 .card {
   box-shadow: inset 15px 15px 30px rgba(25, 25, 25, 0.5), inset -15px -15px 30px rgba(60, 60, 60, 0.5) !important;
-
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -29,24 +28,35 @@
   background: #212121 !important;
 }
 
+.card:hover {
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60) !important;
+}
+
 .card__content {
   padding: 0 !important;
 }
 
 .card__title {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 600 !important;
 }
 
 .subtitle {
   text-transform: capitalize;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 500 !important;
   display: flex;
 }
 
 .icon {
   color: var(--color-text);
+}
+
+.arrow__icon {
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 .image {
@@ -61,4 +71,5 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
+  margin-top: 5px;
 }

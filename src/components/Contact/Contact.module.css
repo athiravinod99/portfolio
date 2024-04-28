@@ -50,6 +50,7 @@
 
 .linkedIn {
   color: var(--color-text);
+  font-size: xx-large !important;
 }
 
 .card2 {
@@ -65,11 +66,16 @@
 .card2:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 .card2:hover .github {
-  color: black !important;
+  color: white !important;
+}
+
+.github {
+  color: white !important;
+  font-size: xx-large !important;
 }
 
 .down {
@@ -100,6 +106,7 @@
 
 .whatsapp {
   color: var(--color-text);
+  font-size: xx-large !important;
 }
 
 .card4 {
@@ -125,13 +132,14 @@
 
 .gmail {
   color: var(--color-text);
+  font-size: xx-large !important;
 }
 
 .form__card {
-  background: var(--color-subheading) !important;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%) !important;
   border-radius: 10px !important;
   padding: 25px 35px;
-  border: 5px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
   box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
   margin: 20px;
 }

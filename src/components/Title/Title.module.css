@@ -2,16 +2,25 @@
 
 .container {
     margin: 10px 0 30px 0;
-}
-
-.title {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .container.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .title {
     color: var(--color-subheading);
     font-weight: 600 !important;
     text-transform: uppercase;
-}
-
-.subtitle {
+  }
+  
+  .subtitle {
     color: var(--color-text);
     text-transform: uppercase;
     font-weight: 400;
-}
+  }
+  

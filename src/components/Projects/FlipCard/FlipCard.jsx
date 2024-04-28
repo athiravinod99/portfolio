@@ -15,7 +15,7 @@ export const FlipCard = (props) => {
             <img src={props.image} alt="travel" className={styles.image} />
             <div className={styles.project__details}>
               <Typography variant="body1" className={styles.subtitle}>
-                <ArrowOutwardIcon />
+                <ArrowOutwardIcon className={styles.arrow__icon}/>
                 Live
               </Typography>
               <Typography variant="body1" className={styles.icon}>
