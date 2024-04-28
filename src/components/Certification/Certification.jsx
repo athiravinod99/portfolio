@@ -1,3 +1,4 @@
+// Certification section
 import React, { useState } from 'react';
 import { CertificationCard } from './CertificationCard/CertificationCard';
 import { Title } from '../Title/Title';
@@ -32,8 +33,8 @@ export const Certification = () => {
     <section className={styles.container}>
       <Title title="Certifications" subtitle="Credentials of Achievement" />
       <div className={styles.carousel}>
-        <div className={styles.buttonContainer}>
-            <ArrowBackIcon className={styles.prevButton} onClick={handlePrev} />
+        <div className={styles.button__container}>
+            <ArrowBackIcon className={styles.prev__button} onClick={handlePrev} />
         </div>
         <div className={styles.cards}>
           {certifications.slice(startIndex, startIndex + 3).map((certification, index) => (
@@ -45,8 +46,8 @@ export const Certification = () => {
             link={certification.link}/>
           ))}
         </div>
-        <div className={styles.buttonContainer}>
-            <ArrowForwardIcon className={styles.nextButton} onClick={handleNext}/>
+        <div className={styles.button__container}>
+            <ArrowForwardIcon className={styles.next__button} onClick={handleNext}/>
         </div>
       </div>
     </section>

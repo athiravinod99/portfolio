@@ -1,3 +1,4 @@
+// Skills section
 import React, { useState } from "react";
 import { Tabs, Tab, Typography, Grid, Container } from "@mui/material";
 import styles from "./Skills.module.css";
@@ -15,7 +16,6 @@ import nodejs from "../../assets/hero/nodejs.svg";
 import tsImg from "../../assets/hero/tsImg.svg";
 import pythonImg from "../../assets/hero/pythonImg.svg";
 import muiImg from "../../assets/hero/muiImg.svg";
-import LinearProgress from "@mui/material/LinearProgress";
 
 export const Skills = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -68,7 +68,7 @@ export const Skills = () => {
   };
 
   return (
-    <div className={styles.skillsContainer}>
+    <div className={styles.skills__container}>
       <Title title="My Skills" subtitle="Professional Skills" />
       <Tabs
         value={activeTab}
@@ -81,20 +81,19 @@ export const Skills = () => {
           <Tab
             key={index}
             label={item.title}
-            className={`${styles.tabButton} ${
+            className={`${styles.tab__button} ${
               activeTab === index ? styles.activeTabButton : ""
             }`}
             style={{
               backgroundColor:
-              activeTab === index ? "orange" : "rgb(31, 31, 31)",
+                activeTab === index ? "orange" : "rgb(31, 31, 31)",
               color: activeTab === index ? "black" : "white",
               flexGrow: 1,
-              border:
-              activeTab === index ? "3px solid orange" : "none",
-              borderBottom:
-              activeTab === index ? "none" : "3px solid orange",
+              border: activeTab === index ? "3px solid orange" : "none",
+              borderBottom: activeTab === index ? "none" : "3px solid orange",
               fontWeight: activeTab === index ? "600" : "500",
-              indicatorColor: activeTab === index ? "orange" : "rgb(31, 31, 31)",
+              indicatorColor:
+                activeTab === index ? "orange" : "rgb(31, 31, 31)",
             }}
           />
         ))}
@@ -103,25 +102,25 @@ export const Skills = () => {
         {skillsData[activeTab].skills.map((skill, index) => (
           <div
             key={index}
-            className={index < 3 ? styles.skillLine1 : styles.skillLine2}
+            className={index < 3 ? styles.skill__line1 : styles.skill__line2}
           >
             <Grid container>
               <Grid item xs={2}>
                 <img src={skill.img} alt={skill.name} className={styles.img} />
               </Grid>
               <Grid item xs={10}>
-                <div className={styles.skillDetails}>
-                <Typography variant="body1" className={styles.skillName}>
-                  {skill.name} 
-                </Typography>
-                <Typography variant="body1" className={styles.skillValue}>
-                  {skill.value ? `${skill.value}%` : ""}
-                </Typography>
+                <div className={styles.skill__details}>
+                  <Typography variant="body1" className={styles.skill__name}>
+                    {skill.name}
+                  </Typography>
+                  <Typography variant="body1" className={styles.skill__value}>
+                    {skill.value ? `${skill.value}%` : ""}
+                  </Typography>
                 </div>
-                
-                <div className={styles.progressBarContainer}>
+
+                <div className={styles.progressbar__container}>
                   <div
-                    className={styles.progressBar}
+                    className={styles.progressbar}
                     style={{ width: `${skill.value}%` }}
                   />
                 </div>

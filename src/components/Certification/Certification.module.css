@@ -20,21 +20,21 @@
     justify-content: center;
 }
 
-.buttonContainer {
+.button__container {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.prevButton,
-.nextButton {
+.prev__button,
+.next__button {
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.nextButton:hover {
+.next__button:hover {
     animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 

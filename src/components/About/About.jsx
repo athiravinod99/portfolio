@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+// About section
+import React, { useEffect } from "react";
 import {
   Card,
-  CardContent,
   Grid,
-  Stepper,
-  Step,
-  StepLabel,
   Typography,
 } from "@mui/material";
 import styles from "./About.module.css";
@@ -75,37 +72,37 @@ export const About = () => {
           </Grid>
         </Grid>
         <Grid item xs={6}>
-          <Grid container className={styles.aboutDetails}>
+          <Grid container className={styles.about__details}>
           <Card className={styles.card}>
             <Grid container>
               <Grid item xs={6}>
                 <Grid container alignItems="center" spacing={1}>
-                  <Grid item xs={2} className={styles.boxItems}>
+                  <Grid item xs={2} className={styles.box__items}>
                     <MailOutlineIcon className={styles.icon} />
                   </Grid>
                   <Grid item xs={10} >
-                    <Typography variant="body1" className={styles.cardText}>Email me</Typography>
-                    <Typography variant="body1" className={styles.cardText}>athiravinod.mec@gmail.com</Typography>
+                    <Typography variant="body1" className={styles.card__text}>Email me</Typography>
+                    <Typography variant="body1" className={styles.card__text}>athiravinod.mec@gmail.com</Typography>
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item xs={6}>
                 <Grid container alignItems="center" spacing={1}>
-                  <Grid item xs={2} className={styles.boxItems}>
+                  <Grid item xs={2} className={styles.box__items}>
                     <CallIcon className={styles.icon} />
                   </Grid>
                   <Grid item xs={10}>
-                    <Typography variant="body1" className={styles.cardText}>Make a call</Typography>
-                    <Typography variant="body1" className={styles.cardText}>9995331498</Typography>
+                    <Typography variant="body1" className={styles.card__text}>Make a call</Typography>
+                    <Typography variant="body1" className={styles.card__text}>9995331498</Typography>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Card>
             <Grid item xs={12}>
-              <div className={styles.checkboxGrid}>
+              <div className={styles.checkbox_grid}>
                 {checkboxItems.map((item, index) => (
-                  <label key={index} className={styles.checkContainer}>
+                  <label key={index} className={styles.check__container}>
                     <input type="checkbox" checked="checked" />
                     <div className={styles.checkmark}></div>
                     <Typography variant="subtitle" className={styles.item}>{item}</Typography>

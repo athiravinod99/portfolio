@@ -1,32 +1,33 @@
-import styles from "./FlipCard.module.css"
+//Project card
+import styles from "./FlipCard.module.css";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 export const FlipCard = (props) => {
-    return (
-      <div className={styles.flipCard}>
-        <div className={styles.flipCardInner}>
-          <Card
-            className={styles.flipCardFront}
-            style={{ border: "1px solid #ccc", height: "300px" }}
-          >
-            <CardContent className={styles.cardContent}>
-                <img
-                  src={props.image}
-                  alt="travel"
-                  className={styles.image}
-                />
-                <div className={styles.moreDetails}>
-                <Typography variant="body1" className={styles.subtitle}><ArrowOutwardIcon />Live</Typography>
-                <Typography variant="body1" className={styles.icon}><GitHubIcon /></Typography>
-                </div>
-              <Typography variant="h6" className={styles.cardTitle}>
-                {props.title}
+  return (
+    <div className={styles.project__card}>
+      <div className={styles.card__inner}>
+        <Card
+          className={styles.card}
+        >
+          <CardContent className={styles.card__content}>
+            <img src={props.image} alt="travel" className={styles.image} />
+            <div className={styles.project__details}>
+              <Typography variant="body1" className={styles.subtitle}>
+                <ArrowOutwardIcon />
+                Live
               </Typography>
-            </CardContent>
-          </Card>
-        </div>
+              <Typography variant="body1" className={styles.icon}>
+                <GitHubIcon />
+              </Typography>
+            </div>
+            <Typography variant="h6" className={styles.card__title}>
+              {props.title}
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
-    );
-}
+    </div>
+  );
+};

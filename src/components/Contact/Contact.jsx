@@ -1,19 +1,14 @@
+// Contact section
 import React from "react";
-import {
-  Grid,
-  Card,
-  CardContent,
-  TextField,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Grid, Card, CardContent, TextField, Typography } from "@mui/material";
 import styles from "./Contact.module.css";
 import MailIcon from "@mui/icons-material/Mail";
 import { Title } from "../Title/Title";
 import { PortfolioButton } from "../PortfolioButton/PortfolioButton";
-import CallIcon from '@mui/icons-material/Call';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import CallIcon from "@mui/icons-material/Call";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
 export const Contact = () => {
   const contactInfo = [
     {
@@ -39,15 +34,16 @@ export const Contact = () => {
   ];
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Implement logic to handle form submission
   };
 
   return (
     <div className={styles.container}>
       <Title title="Contact" subtitle="Feel free to reachout!" />
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6} style={{ width: "90%", margin: "auto"}}>
-          <Typography variant="h5" className={styles.iconHead}>Find me on</Typography>
+        <Grid item xs={12} md={6} style={{ width: "90%", margin: "auto" }}>
+          <Typography variant="h5" className={styles.icon__head}>
+            Find me on
+          </Typography>
           <div className={styles.main}>
             <div className={styles.up}>
               <button className={styles.card1}>
@@ -68,7 +64,7 @@ export const Contact = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Card className={styles.formCard}>
+          <Card className={styles.form__card}>
             <CardContent>
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={2}>
